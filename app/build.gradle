@@ -1,0 +1,26 @@
+plugins {
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+def neo4jVersion = '4.2.5'
+
+dependencies {
+    implementation "org.neo4j:neo4j:${neo4jVersion}"
+
+    testImplementation "org.neo4j.test:neo4j-harness:${neo4jVersion}"
+    testImplementation "org.neo4j.community:it-test-support:${neo4jVersion}"
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+application {
+    mainClass = 'com.cberes.graphs.App'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
