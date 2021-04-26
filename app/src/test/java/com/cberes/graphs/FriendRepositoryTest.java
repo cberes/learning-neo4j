@@ -12,13 +12,19 @@ import static org.junit.jupiter.api.Assertions.*;
 class FriendRepositoryTest {
     /*
      * Some useful links
+     * https://neo4j.com/docs/java-reference/current/java-embedded/hello-world/
      * https://neo4j.com/docs/java-reference/current/java-embedded/cypher-java/#cypher-java
      * https://github.com/neo4j/neo4j/search?q=impermanent
+     * https://github.com/neo4j/neo4j/blob/e89ade8beeb5f491c218c67a0d2cfcb1c5a5c2b6/community/community-it/kernel-it/src/test/java/org/neo4j/kernel/impl/transaction/TransactionMonitorTest.java
+     * https://github.com/neo4j/neo4j/blob/e89ade8beeb5f491c218c67a0d2cfcb1c5a5c2b6/community/community-it/kernel-it/src/test/java/org/neo4j/graphdb/CreateAndDeleteNodesIT.java
      */
+
+// this is another way to the create the test database
 //    GraphDatabaseService createDatabase() {
 //        DatabaseManagementService managementService
 //                = new TestDatabaseManagementServiceBuilder().impermanent().build();
 //        GraphDatabaseService db = managementService.database();
+//        // do some setup here
 //        return db;
 //    }
 
