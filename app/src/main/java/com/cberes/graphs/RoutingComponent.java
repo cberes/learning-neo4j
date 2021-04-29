@@ -20,7 +20,7 @@ public class RoutingComponent {
                 MATCH route = (s)-[CONNECTED_TO*]-(e)
                 WHERE all(r in relationships(route)
                     WHERE r.line IN $lines)
-                WITH s, route, reduce(weight = 0, r in relationships(route) | weight + r.cost) AS score
+                WITH route, reduce(weight = 0, r in relationships(route) | weight + r.cost) AS score
                 ORDER BY score ASC
                 LIMIT 1
                 RETURN reduce(path = head(nodes(route)).id, n in tail(nodes(route)) | path + '->' + n.id) AS z
